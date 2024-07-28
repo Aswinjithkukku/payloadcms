@@ -1,6 +1,6 @@
-import type { Config } from '../../payload/payload-types'
-
 import payload from 'payload'
+
+import type { Config } from '../../payload/payload-types'
 
 export const fetchDoc = async <T>(args: {
   collection: keyof Config['collections']

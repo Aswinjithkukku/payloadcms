@@ -5,15 +5,15 @@ import { adminsOrPublished } from '../../access/adminsOrPublished'
 import { Archive } from '../../blocks/ArchiveBlock'
 import { CallToAction } from '../../blocks/CallToAction'
 import { Content } from '../../blocks/Content'
+import { HeroBlock } from '../../blocks/HeroBlock'
+import { LogoGridBlock } from '../../blocks/LogoGridBlock'
 import { MediaBlock } from '../../blocks/MediaBlock'
+import { PromotionBlock } from '../../blocks/PromotionBlock'
 import { hero } from '../../fields/hero'
 import { slugField } from '../../fields/slug'
 import { populateArchiveBlock } from '../../hooks/populateArchiveBlock'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { revalidatePage } from './hooks/revalidatePage'
-import { HeroBlock } from '../../blocks/HeroBlock'
-import { LogoGridBlock } from '../../blocks/LogoGridBlock'
-import { PromotionBlock } from '../../blocks/PromotionBlock'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',

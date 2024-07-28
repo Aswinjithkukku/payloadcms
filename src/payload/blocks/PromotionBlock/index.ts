@@ -1,4 +1,5 @@
-import { Block, Field } from 'payload/types'
+import type { Block, Field } from 'payload/types'
+
 import richText from '../../fields/richText'
 
 const textTypeFields: Field[] = [
