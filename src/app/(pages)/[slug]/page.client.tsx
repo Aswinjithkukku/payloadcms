@@ -1,9 +1,9 @@
 'use client'
 
+import React from 'react'
+import { useLivePreview } from '@payloadcms/live-preview-react'
 import { Blocks } from '../../_components/Blocks'
 import { Page } from '../../../payload/payload-types'
-import { useLivePreview } from '@payloadcms/live-preview-react'
-import React from 'react'
 
 const PageTemplate: React.FC<{ page: Page }> = ({ page }) => {
   const { data } = useLivePreview({
