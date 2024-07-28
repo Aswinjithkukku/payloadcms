@@ -112,6 +112,7 @@ export const HeroBlock: Block = {
       name: 'columns',
       type: 'array',
       fields: columnFields,
+      maxRows: 2
     },
   ],
 }

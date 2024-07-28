@@ -13,6 +13,7 @@ import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { revalidatePage } from './hooks/revalidatePage'
 import { HeroBlock } from '../../blocks/HeroBlock'
 import { LogoGridBlock } from '../../blocks/LogoGridBlock'
+import { PromotionBlock } from '../../blocks/PromotionBlock'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -69,7 +70,15 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [CallToAction, Content, MediaBlock, Archive, HeroBlock, LogoGridBlock],
+              blocks: [
+                CallToAction,
+                Content,
+                MediaBlock,
+                Archive,
+                HeroBlock,
+                LogoGridBlock,
+                PromotionBlock,
+              ],
             },
           ],
         },

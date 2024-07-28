@@ -16,6 +16,7 @@ export interface Config {
     users: User;
     comments: Comment;
     partnerLogos: PartnerLogo;
+    icons: Icon;
     redirects: Redirect;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -188,6 +189,35 @@ export interface Page {
         id?: string | null;
         blockName?: string | null;
         blockType: 'logoGridBlock';
+      }
+    | {
+        columns?:
+          | {
+              typeOfSection: 'textType' | 'badgeType';
+              textFields?: {
+                title: string;
+                underline?: boolean | null;
+              };
+              badgeFields?: {
+                badgeNumber: number;
+                heading?: string | null;
+                description?: string | null;
+              };
+              keyPoints?:
+                | {
+                    richText: {
+                      [k: string]: unknown;
+                    }[];
+                    icon: string | Icon;
+                    id?: string | null;
+                  }[]
+                | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'promotionBlock';
       }
   )[];
   slug?: string | null;
@@ -659,6 +689,29 @@ export interface Project {
  * via the `definition` "partnerLogos".
  */
 export interface PartnerLogo {
+  id: string;
+  alt: string;
+  caption?:
+    | {
+        [k: string]: unknown;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "icons".
+ */
+export interface Icon {
   id: string;
   alt: string;
   caption?:
