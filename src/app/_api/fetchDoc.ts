@@ -19,7 +19,7 @@ export const fetchDoc = async <T>(args: {
   //   token = cookies().get(payloadToken)
   // }
 
-  const doc: T = await payload
+  const doc = await payload
     .find({
       collection,
       where: {
@@ -31,6 +31,6 @@ export const fetchDoc = async <T>(args: {
     ?.then(res => {
       return res.docs[0]
     })
-
+  // @ts-ignore
   return doc
 }

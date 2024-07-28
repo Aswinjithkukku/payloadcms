@@ -16,6 +16,7 @@ export const LogoGridBlock: React.FC<
         <div className="grid grid-cols-5 place-items-center ">
           {logos.map((data, i) => (
             <div key={i} className="">
+              {/* @ts-ignore */}
               <img src={data?.logo?.url} alt={`${i}`} className="object-contain h-10" />
             </div>
           ))}
