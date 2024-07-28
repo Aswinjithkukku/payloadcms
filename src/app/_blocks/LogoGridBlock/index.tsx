@@ -1,4 +1,4 @@
-import { Page, PartnerLogo } from '@/payload/payload-types'
+import { Page, PartnerLogo } from '../../../payload/payload-types'
 import React from 'react'
 
 type Props = Extract<Page['layout'][0], { blockType: 'logoGridBlock' }>

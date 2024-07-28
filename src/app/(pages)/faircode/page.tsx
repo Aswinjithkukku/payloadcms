@@ -1,8 +1,7 @@
 import React from 'react'
 import { MdArrowRightAlt } from 'react-icons/md'
 import LogoGrid from './_blocks/LogoGrid'
-import { Button } from '@/app/_components/Button'
-import { url } from 'inspector'
+import { Button } from '../../_components/Button'
 
 const FaircodePage = () => {
   return (

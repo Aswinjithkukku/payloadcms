@@ -1,4 +1,4 @@
-import { Page } from '@/payload/payload-types'
+import { Page } from '../../../payload/payload-types'
 import React from 'react'
 import { MdArrowRightAlt } from 'react-icons/md'
 
