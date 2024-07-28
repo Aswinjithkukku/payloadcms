@@ -15,6 +15,7 @@ import Comments from './collections/Comments'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
+import { PatnerLogos } from './collections/PartnerLogos'
 import { Projects } from './collections/Projects'
 import Users from './collections/Users'
 import BeforeDashboard from './components/BeforeDashboard'
@@ -71,7 +72,7 @@ export default buildConfig({
     url: process.env.DATABASE_URI,
   }),
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments],
+  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments, PatnerLogos],
   globals: [Settings, Header, Footer],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

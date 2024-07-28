@@ -15,6 +15,7 @@ export interface Config {
     categories: Category;
     users: User;
     comments: Comment;
+    partnerLogos: PartnerLogo;
     redirects: Redirect;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -177,6 +178,16 @@ export interface Page {
         id?: string | null;
         blockName?: string | null;
         blockType: 'heroBlock';
+      }
+    | {
+        logos: {
+          company: string;
+          logo: string | PartnerLogo;
+          id?: string | null;
+        }[];
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'logoGridBlock';
       }
   )[];
   slug?: string | null;
@@ -642,6 +653,29 @@ export interface Project {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "partnerLogos".
+ */
+export interface PartnerLogo {
+  id: string;
+  alt: string;
+  caption?:
+    | {
+        [k: string]: unknown;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

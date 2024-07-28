@@ -12,6 +12,7 @@ import { populateArchiveBlock } from '../../hooks/populateArchiveBlock'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { revalidatePage } from './hooks/revalidatePage'
 import { HeroBlock } from '../../blocks/HeroBlock'
+import { LogoGridBlock } from '../../blocks/LogoGridBlock'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -24,7 +25,7 @@ export const Pages: CollectionConfig = {
       )}&secret=${process.env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
     },
     livePreview: {
-      url: "http://localhost:3000"
+      url: 'http://localhost:3000',
     },
   },
   hooks: {
@@ -68,7 +69,7 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [CallToAction, Content, MediaBlock, Archive , HeroBlock],
+              blocks: [CallToAction, Content, MediaBlock, Archive, HeroBlock, LogoGridBlock],
             },
           ],
         },

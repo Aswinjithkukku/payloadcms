@@ -9,8 +9,9 @@ import { MediaBlock } from '../../_blocks/MediaBlock'
 import { RelatedPosts, type RelatedPostsProps } from '../../_blocks/RelatedPosts'
 import { toKebabCase } from '../../_utilities/toKebabCase'
 import { BackgroundColor } from '../BackgroundColor'
-import { HeroBlock } from "../../_blocks/HeroBlock"
+import { HeroBlock } from '../../_blocks/HeroBlock'
 import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding'
+import { LogoGridBlock } from '../../_blocks/LogoGridBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -19,7 +20,8 @@ const blockComponents = {
   archive: ArchiveBlock,
   relatedPosts: RelatedPosts,
   comments: CommentsBlock,
-  heroBlock: HeroBlock
+  heroBlock: HeroBlock,
+  logoGridBlock: LogoGridBlock,
 }
 
 export const Blocks: React.FC<{
@@ -30,7 +32,6 @@ export const Blocks: React.FC<{
 
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
 
-  
   if (hasBlocks) {
     return (
       <Fragment>

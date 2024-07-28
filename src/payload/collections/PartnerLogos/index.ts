@@ -2,7 +2,7 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import type { CollectionConfig } from 'payload/types'
 
-export const Media: CollectionConfig = {
+export const PatnerLogos: CollectionConfig = {
   slug: 'partnerLogos',
   upload: {
     staticDir: path.resolve(__dirname, '../../../logos'),
