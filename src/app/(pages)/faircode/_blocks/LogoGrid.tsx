@@ -13,7 +13,7 @@ const LogoGrid = () => {
       <div className="grid grid-cols-5 place-content-center">
         {imagesPath.map((path, i) => (
           <div key={i} className="">
-            <img src={path} alt={`${i}`} className="object-contain h-10" />
+            {/* <img src={path} alt={`${i}`} className="object-contain h-10" /> */}
           </div>
         ))}
       </div>

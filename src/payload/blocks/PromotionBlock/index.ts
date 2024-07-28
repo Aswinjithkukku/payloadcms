@@ -1,5 +1,5 @@
-import richText from '../../fields/richText'
 import { Block, Field } from 'payload/types'
+import richText from '../../fields/richText'
 
 const textTypeFields: Field[] = [
   {
@@ -94,7 +94,7 @@ export const PromotionBlock: Block = {
       name: 'columns',
       type: 'array',
       fields: columnFields,
-      maxRows: 2
+      maxRows: 2,
     },
   ],
 }

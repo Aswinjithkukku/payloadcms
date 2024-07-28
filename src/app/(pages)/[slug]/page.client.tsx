@@ -1,7 +1,7 @@
 'use client'
 
-import { Blocks } from '@/app/_components/Blocks'
-import { Page } from '@/payload/payload-types'
+import { Blocks } from '../../_components/Blocks'
+import { Page } from '../../../payload/payload-types'
 import { useLivePreview } from '@payloadcms/live-preview-react'
 import React from 'react'
 

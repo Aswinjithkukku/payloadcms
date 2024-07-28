@@ -26,7 +26,7 @@ export const Pages: CollectionConfig = {
       )}&secret=${process.env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
     },
     livePreview: {
-      url: 'http://localhost:3000',
+      url: process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000',
     },
   },
   hooks: {
